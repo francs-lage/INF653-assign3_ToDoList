@@ -1,0 +1,99 @@
+
+body { 
+   background-color:black; 
+   background-image: url(img/green_bubbles.jpg);
+}
+
+header, #ListItemsSection, #addItemSection {
+    background-color:blanchedalmond;
+    max-width: 90%;
+    margin: auto;
+    border-radius: 10px;
+}
+header {
+    text-align: center;
+    border-radius: 10px;
+}
+
+#ListItemsSection {
+    min-height: 300px;
+    max-height: 400px;
+    overflow: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.itemDiv { 
+    background: LightGray;
+    margin: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "areaTitle areaButton"
+      "areaDesc areaButton "; 
+  }
+.title {
+    grid-area: areaTitle;
+    font-family:fantasy;
+    font-weight: bold;
+}
+.description {
+    grid-area: areaDesc;
+    font-family: "Patrick Hand";
+    margin-top: 0;
+}
+.deletebutton {
+    font-weight: bolder;
+    grid-area: areaButton;
+    margin: auto;
+}
+i {
+    color:red;
+}
+
+#h1AddItem {
+    padding-left: 20px;
+} 
+.addItem {
+    overflow: hidden;
+    margin: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 2fr 6fr ;
+    grid-template-rows: 1fr fr 1fr;
+    grid-row-gap: 5px;
+    grid-template-areas:
+      "areaLabelT areaInputT"
+      "areaLabelD areaInputD"
+      "areaLabelE areaButtonD"; 
+}
+#labelNT {
+    grid-area: areaLabelT;
+}
+#newtitle {
+    grid-area: areaInputT;
+}
+#labelND {
+    grid-area: areaLabelD;
+}
+#newdescription {
+    grid-area: areaInputD;
+}
+.addButton {
+    float: left;
+    grid-area: areaButtonD;
+    padding-bottom: 5px;
+}
+@media only screen and (min-width: 600px){
+    header, #ListItemsSection, #addItemSection {
+        max-width: 60%;
+    }
+}
+@media only screen and (min-width: 1000px){
+    header, #ListItemsSection, #addItemSection {
+        max-width: 40%;
+    }
+}
